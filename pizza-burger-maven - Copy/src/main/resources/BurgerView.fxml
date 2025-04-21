@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="edu.unomaha.gui.BurgerView">
+    <VBox spacing="10" alignment="TOP_CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Label text="Build Your Burger" style="-fx-font-size: 18;" />
+
+        <!-- Bun Selection -->
+        <HBox spacing="10">
+            <Label text="Select Bun:" />
+            <ComboBox fx:id="bunComboBox" prefWidth="200"/>
+        </HBox>
+
+        <!-- Cheese Selection -->
+        <HBox spacing="10">
+            <Label text="Select Cheese:" />
+            <ComboBox fx:id="cheeseComboBox" prefWidth="200"/>
+        </HBox>
+
+        <!-- Patty Selection -->
+        <HBox spacing="10">
+            <Label text="Select Patty:" />
+            <ComboBox fx:id="pattyComboBox" prefWidth="200"/>
+        </HBox>
+
+        <!-- Garnish Selection -->
+        <Label text="Select Garnishes (Ctrl+Click for multiple):" />
+        <ListView fx:id="garnishListView" prefHeight="100" prefWidth="250" />
+        
+        <!-- Summary Button and Output -->
+        <Button text="Get Summary" onAction="#handleGetSummary" />
+        <TextArea fx:id="summaryArea" prefHeight="150" prefWidth="300" editable="false" wrapText="true"/>
+    </VBox>
+</AnchorPane>

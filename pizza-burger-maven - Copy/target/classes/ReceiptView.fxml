@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="edu.unomaha.controller.ReceiptView">
+    <VBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Label text="Receipt" style="-fx-font-size: 18;" />
+
+        <TextArea fx:id="receiptArea" prefHeight="300" prefWidth="400" editable="false" wrapText="true" />
+
+        <HBox spacing="10">
+            <Button text="Clear Receipt" onAction="#handleClearReceipt" />
+            <Button text="Back to Builder" onAction="#handleBackToBuilder" />
+        </HBox>
+    </VBox>
+</AnchorPane>

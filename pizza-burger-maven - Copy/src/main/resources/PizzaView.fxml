@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="edu.unomaha.gui.PizzaView">
+    <VBox spacing="10" alignment="TOP_CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Label text="Build Your Pizza" style="-fx-font-size: 18;" />
+
+        <!-- Crust Selection -->
+        <HBox spacing="10">
+            <Label text="Select Crust:" />
+            <ComboBox fx:id="crustComboBox" prefWidth="200"/>
+        </HBox>
+
+        <!-- Sauce Selection -->
+        <HBox spacing="10">
+            <Label text="Select Sauce:" />
+            <ComboBox fx:id="sauceComboBox" prefWidth="200"/>
+        </HBox>
+
+        <!-- Toppings -->
+        <Label text="Select Toppings:" />
+        <VBox spacing="5">
+            <CheckBox fx:id="pepperoniCheckBox" text="Pepperoni" />
+            <CheckBox fx:id="sausageCheckBox" text="Sausage" />
+            <CheckBox fx:id="mushroomCheckBox" text="Mushrooms" />
+            <CheckBox fx:id="pepperCheckBox" text="Peppers" />
+            <CheckBox fx:id="mozzarellaCheckBox" text="Mozzarella Cheese" />
+            <CheckBox fx:id="asiagoCheckBox" text="Asiago Cheese" />
+        </VBox>
+
+        <!-- Summary Button and Output -->
+        <Button text="Get Summary" onAction="#handleGetSummary" />
+        <TextArea fx:id="summaryArea" prefHeight="150" prefWidth="300" editable="false" wrapText="true"/>
+    </VBox>
+</AnchorPane>
